@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot');
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot');
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

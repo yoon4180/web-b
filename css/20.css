@@ -1,0 +1,29 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.main_visual {
+    height: 800px;
+    background-color: rgb(255, 210, 205);
+}
+.section-01 {
+    height: 800px;
+    background-color: rgb(255, 240, 172);
+    font-size: 50px;
+    line-height: 800px;
+}
+.section-02 {
+    height: 800px;
+    background-color: rgb(184, 248, 229);
+    font-size: 50px;
+    line-height: 800px;
+}

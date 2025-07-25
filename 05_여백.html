@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>여백쓰는법 아르켜줄게</title>
+	<style>
+		*{
+		margin:0;
+		padding:0;
+		}
+
+		ul li{
+		list-style:none;
+		width:200px;
+		height:100px;
+		background-color:#c2f0dc;
+		}
+
+		.box-01 li:nth-child(1){
+		  margin-top:25px;
+		margin-left:100px;
+		margin-bottom:50px;
+		margin-right: 20px;
+		}
+		.box-01 li:nth-child(2){
+		  margin: 10px 100px 50px
+		}  
+		.box-01 li:nth-child(3){
+		  margin: 50px 100px
+		}  
+		.box-01 li:nth-child(4){
+		  margin: 50px auto;
+		}  
+
+		.box-02 li{
+		  margin:20px;
+		box-sizing:border-box;
+		}  
+		.box-02 li:nth-child(1){
+		  padding:50px;
+		}  
+		.box-02 li:nth-child(2){
+		  padding:10px 50px;
+		}
+		.box-02 li:nth-child(3){
+		  padding:30px 40px 50px;
+		}
+		.box-02 li:nth-child(4){
+		  padding:30px 40px 50px 60px;
+		}
+		
+		.event{
+		  width:580px;
+		background-color:#b1e0f0;
+		padding:60px;
+		box-sizing:border-box;
+		
+		}
+		.event h1{
+		  font-size:40px;
+		margin-bottom:40px;
+		}
+
+		.event ol li{
+		list-style:none;
+		background-color: white;
+		margin-bottom:20px;
+		padding:18px 28px;
+		border-radius:30px
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="box-01">
+		<li>마진1</li>
+		<li>마진2</li>
+		<li>마진3</li>
+		<li>마진4</li>
+	</ul>
+	<ul class="box-02">
+		<li>패딩1</li>
+		<li>패딩2</li>
+		<li>패딩3</li>
+		<li>패딩4</li>
+	</ul>
+
+	<div class="event">
+		<h1>슬림 버니 쉐이크</br>
+		이럴 때 드세요</h1>
+		<ol>
+			<li>간편하고 맛있게 체중 조절을 하고 싶을 때</li>
+			<li>바쁜 일상 속, 규칙적인 식단 관리가 필요할 때</li>
+			<li>운동 전, 후 단백질을 보충하고 싶을 때</li>
+			<li>맛 없는 식단에 질렸을 때</li>
+		</ol>
+	</div>
+</body>
+
+
+
+
+
+
+
+
+
+</html>

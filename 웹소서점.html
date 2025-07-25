@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로배치 연습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        li {
+            list-style: none;
+        }
+        
+        .main {
+            width: 600px;
+            background-color: rgb(193, 168, 238);
+            margin: 0 auto;
+            padding: 0 16px;
+            box-sizing: border-box;
+        }
+        .main ul {
+            display: flex;
+        }
+        .main ul li {
+            border: 1px solid black;
+            padding: 0 10px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+        }
+        .list {
+            width: 600px;
+            background-color: rgb(202, 219, 238);
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .list .item {
+            width: 270px;
+            margin-bottom: 40px;
+        }
+        .list .item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>동네서점</h1>
+        <ul>
+            <li>베스트</li>
+            <li>신상품</li>
+            <li>이벤트</li>
+            <li>사은품</li>
+        </ul>
+    </div><!-- .main end -->
+
+    <div class="list">
+        <div class="item"> 
+            <img src="img/데못죽.jpg" aria-label="">
+            <p>데뷔 못 하면 죽는 병 걸림</p>
+        </div><!-- .item end -->
+        <div class="item">
+            <img src="img/괴출.jpg" aria-label="">
+            <p>괴담에 떨어져도 출근을 해야 하는구나</p>
+        </div><!-- .item end -->
+        <div class="item">
+            <img src="img/어바등.jpg" aria-label="">
+            <p>어두운 바다의 등불이 되어</p>
+        </div><!-- .item end -->
+        <div class="item">
+            <img src="img/이착헌.jpg" aria-label="">
+            <p>이세계 착각 헌터</p>
+        </div><!-- .item end -->
+    </div><!-- .list end -->
+</body>
+</html>

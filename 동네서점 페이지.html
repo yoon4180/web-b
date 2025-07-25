@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동네서점</title>
+    <style>
+        @font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .wrap {
+            font-family: 'GmarketSansMedium';
+            width: 426px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+
+        .main {
+            margin-bottom: 62px;
+            padding-top: 50px;
+        }
+        .main h1 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .main ul {
+            display: flex;
+        }
+        .main ul li {
+            margin-right: 14px;
+            font-size: 16px;
+        }
+
+
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+        .best .box {
+            border: 1px solid #555555;
+            border-radius: 10px;
+            width: 390px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            padding: 18px 0;/* box에서 패딩주기 */
+        }
+        .best .box img {
+            width: 102px;
+            height: 124px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-left: 20px;
+        }/* 이미지에 패딩주면 radius잘안됨 */
+        .best .box .text {
+            margin-left: 10px;
+        }
+        .best .box .text p {
+            font-size: 16px;
+        }
+        .best .box .text span {
+            font-size: 14px;
+        }
+        .best .box .text a {
+            font-size: 14px;
+            width: 100px;
+            height: 35px;
+            border-radius: 20px;
+            color: white;
+            background-color: #2C0089;
+            display: block;
+            text-align: center;
+            line-height: 35px;
+            margin-top: 22px;/* 보더기준 */
+        }
+
+
+
+        
+        .today {
+            width: 386px;
+            background-color: rgb(255, 255, 255);
+        }
+        .today .selection {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 26px;
+        }
+        .today .select {
+            width: 123px;
+        }
+        .today .select img{
+            width: 123px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .today .select h3 {
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .fixed {
+            width: 430px;
+            margin: 0 auto;
+        }
+        .fixed img {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+
+        <div class="main">
+            <h1>동네서점</h1>
+            <ul>
+                <li>베스트</li>
+                <li>신상품</li>
+                <li>이벤트</li>
+                <li>사은품</li>
+            </ul>
+            
+        </div><!-- .main end -->
+
+
+        <div class="best">
+            <h2>베스트</h2>
+                <div class="box">
+                    <img src="img/미스터.png">
+                    <div class="text">
+                        <p>미스터 프레지던트</p>
+                        <span>탁현민</span>
+                        <a href="#">바로가기</a>
+                    </div><!-- .text end -->
+                </div><!-- .box end -->
+            
+        </div><!-- .best end -->
+
+
+        <div class="today">
+            <h2>오늘의 선택</h2>
+            <div class="selection">
+                <div class="select">
+                    <img src="img/세이노.png">
+                    <h3>세이노의 가르침</h3>
+                </div>
+                <div class="select">
+                    <img src="img/행복을.png">
+                    <h3>행복을 담아줄게</h3>
+                </div>
+                <div class="select">
+                    <img src="img/에이든.png">
+                    <h3>에이든 국내여행</h3>
+                </div>
+                <div class="select">
+                    <img src="img/원씽.jpg">
+                    <h3>원씽 </h3>
+                </div>
+                <div class="select">
+                    <img src="img/불편한.jpg">
+                    <h3>불편한편의점</h3>
+                </div>
+                <div class="select">
+                    <img src="img/역행자.jpg">
+                    <h3>역행자 </h3>
+                </div><!-- .select end -->
+            </div><!-- .selection end -->
+        </div><!-- .today end -->
+
+
+    </div><!-- wrap end -->
+
+    <div class="fixed">
+        <img src="img/bottom_menu.png">
+    </div> 
+
+
+</body>
+</html>

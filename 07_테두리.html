@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리지롱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        } /* 리스트 앞에 목록형식 제거*/
+        a {
+            text-decoration: none;
+            color: inherit;
+        } /* 링크 연결 텍스트에 밑줄 제거, 색상 초기화*/
+        body {
+            background-color: rgb(180, 180, 180);
+        }
+        .border div {
+            width: 150px;
+            height: 50px;
+            text-align:center;
+            line-height: 50px;
+            margin: 30px;
+        }
+        .border div:nth-child(1) {
+            border-width: 10px;
+            border-style: double;
+            border-color: white;
+        }
+        .border div:nth-child(2) {
+            border-width: 10px;
+            border-style:groove;
+            border-color: white;
+        }
+        .border div:nth-child(3) {
+            border-width: 5px;
+            border-style: dotted;
+            border-color: white;
+            border-radius: 50%;
+        }
+        .border div:nth-child(4) {
+            border: 5px dashed white;
+            /* 테두리 : 두께 파선 흰색 (순서바뀌어도 상관없음) */
+            border-radius: 50%;
+        }
+        .border div:nth-child(5) {
+            border: 5px solid white;
+            border-radius: 50%;
+        }
+        .border div:nth-child(6) {
+            border: 10px ridge white;
+        }
+        .border div:nth-child(7) {
+            border: 10px inset white;
+        }
+        .border div:nth-child(8) {
+            border: 10px outset white;
+        }
+        .border div:nth-child(9) {
+            border-top: 5px solid rgb(255, 209, 241);
+            border-right: 7px solid rgb(235, 153, 203);
+            border-bottom: 10px solid rgb(223, 121, 163);
+            border-left: 4px solid rgb(247, 226, 242);
+        }
+        .border div:nth-child(10) {
+            width: 200px;
+            height: 100px;
+            border: 5px dashed rgb(223, 121, 163);
+            background-color: rgba(253, 195, 231, 0.3);
+            text-align: center;
+            line-height:100px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: rgb(102, 38, 65);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="border">
+        <div>테두리 1</div>
+        <div>테두리 2</div>
+        <div>테두리 3</div>
+        <div>테두리 4</div>
+        <div>테두리 5</div>
+        <div>테두리 6</div>
+        <div>테두리 7</div>
+        <div>테두리 8</div>
+        <div>테두리 9</div>
+        <div>테두리 10</div>
+    </div> <!-- .border end -->
+
+    <div>
+        <a href="#">버튼</a>
+    </div>
+</body>
+</html>

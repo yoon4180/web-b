@@ -1,0 +1,179 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../font/Pretendard/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../font/Pretendard/Pretendard-ExtraBold.woff2) format('woff2'), url(./woff/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/Pretendard/Pretendard-Bold.woff2) format('woff2'), url(./woff/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../font/Pretendard/Pretendard-SemiBold.woff2) format('woff2'), url(./woff/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../font/Pretendard/Pretendard-Medium.woff2) format('woff2'), url(./woff/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/Pretendard/Pretendard-Regular.woff2) format('woff2'), url(./woff/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../font/Pretendard/Pretendard-Light.woff2) format('woff2'), url(./woff/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(../font/Pretendard/Pretendard-ExtraLight.woff2) format('woff2'), url(./woff/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(../font/Pretendard/Pretendard-Thin.woff2) format('woff2'), url(./woff/Pretendard-Thin.woff) format('woff');
+}
+body {
+    font-family: 'Pretendard';
+    color: #333333;
+}
+.inner {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 160px 0;
+    /* background-color: antiquewhite; */
+}
+.inner h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+.cat ul {
+    display: flex;
+    column-gap: 16px;
+    /* row-gap 행간여백(위아래)
+       column-gap 열간여백 (좌우)*/
+    margin-bottom: 20px;
+}
+.cat li {
+    height: 40px;
+    background-color: #F2F2F2;
+    padding: 0 20px;
+    align-content: center;
+    border-radius: 40px;
+    font-size: 16px;
+}
+.cat li.active{
+    background-color: #0198ED;
+    color: white;
+}
+/* .cat li:nth-child(1) {
+    background-color: #0198ED;
+    color: white; 나중에 active에 상호작용 필요함
+} */
+
+.item {
+    width: 100%;
+    height: 628px;
+    display: flex;
+    justify-content: space-between;
+}
+.item .left {
+    width: 637px;
+    height: 100%;
+}
+.item .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.item .right {
+    width: 615px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* row-gap: 29px; */
+    align-content: space-between;
+}
+.item .right .sel {
+    display: flex;
+    column-gap: 29px;
+}
+.item .right .sel img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    /* margin-right: 29px; */
+}
+.item .right .text {
+    align-content: center;
+    color: #333333;
+    word-break: keep-all;
+}
+.item .right .text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.item .right .text p {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.item .right .text strong {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+/* h1, h2, h3, strong, b {
+    font-weight: inherit;
+    이렇게 해두면 볼드 자동적용 해제 */
+/* span 태그는 margin 적용안됨 */

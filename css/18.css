@@ -1,0 +1,88 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../font/GmarketSans/GmarketSansTTFBold.eot');
+    src: url('../font/GmarketSans/GmarketSansTTFBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/GmarketSans/GmarketSansTTFBold.woff2') format('woff2'),
+        url('../font/GmarketSans/GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../font/GmarketSans/GmarketSansTTFLight.eot');
+    src: url('../font/GmarketSans/GmarketSansTTFLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/GmarketSans/GmarketSansTTFLight.woff2') format('woff2'),
+        url('../font/GmarketSans/GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GmarketSans';
+    src: url('../font/GmarketSans/GmarketSansTTFMedium.eot');
+    src: url('../font/GmarketSans/GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font/GmarketSans/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('../font/GmarketSans/GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot');
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot');
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font1 p {
+    font-family: 'GmarketSans';
+    font-size: 50px;
+}
+.font1 p:nth-child(1) {
+    font-weight: 300;
+}
+.font1 p:nth-child(2) {
+    font-weight: 500;
+}
+.font1 p:nth-child(3) {
+    font-weight: bold;
+}
+.font2 p {
+    font-family: 'Galmuri11';
+    font-size: 45px;
+}
+.font2 p:nth-child(1) {
+    font-weight: normal;
+}
+.font2 p:nth-child(2) {
+    font-weight: bold;
+}

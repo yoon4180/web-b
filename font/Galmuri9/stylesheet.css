@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Galmuri9';
+    src: url('../font/Galmuri9/Galmuri9-Regular.eot');
+    src: url('../font/Galmuri9Galmuri9-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri9Galmuri9-Regular.woff2') format('woff2'),
+        url('../font/Galmuri9Galmuri9-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

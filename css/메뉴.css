@@ -1,0 +1,114 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot');
+    src: url('../font/Galmuri11/Galmuri11-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Galmuri11';
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot');
+    src: url('../font/Galmuri11/Galmuri11-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff2') format('woff2'),
+        url('../font/Galmuri11/Galmuri11-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Galmuri9';
+    src: url('../font/Galmuri9/Galmuri9-Regular.eot');
+    src: url('../font/Galmuri9Galmuri9-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Galmuri9Galmuri9-Regular.woff2') format('woff2'),
+        url('../font/Galmuri9Galmuri9-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-family: 'Galmuri9';
+    background-color: rgb(179, 19, 19);
+}
+.inner {
+    width: 1450px;
+    margin: 100px auto;
+    padding: 80px 50px 100px;
+    background-color: rgb(253, 242, 145);
+    border: 15px double rgb(9, 102, 9);
+}
+.inner .lunch {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.inner .lunch h1 {
+    font-size: 50px;
+    margin-left: 50px;
+}
+.inner .lunch span {
+    font-size: 16px;
+    align-content: center;
+}
+
+
+.inner .list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+.inner .list .item {
+    width: 620px;
+    display: flex;
+    column-gap: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 20px;
+    border-radius: 20px;
+}
+.inner .list .item img {
+    width: 189px;
+    height: 189px;
+    object-fit: cover;
+    border: 1px solid black ;
+    border-radius: 20px;
+}
+.inner .list .item .text {
+    align-content: top;
+}
+.inner .list .item .text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.inner .list .item .text p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.inner .list .item .text small {
+    font-size: 15px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    display: block;
+    color: gray;
+}
+.inner .list .item .text span {
+    font-size: 22px;
+    font-weight: bold;
+}

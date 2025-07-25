@@ -1,0 +1,149 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+
+body {
+    height: 3000px;
+}
+
+
+.position {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(191, 223, 193);
+    margin: 100px auto;
+    position:relative;
+    top: 50px;
+}
+.position div {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed rgb(74, 121, 74);
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+.position div:nth-child(1) {
+    background-color: rgb(244, 245, 193);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.position div:nth-child(2) {
+    background-color: rgb(244, 245, 193);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.position div:nth-child(3) {
+    background-color: rgb(244, 245, 193);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}
+.position div:nth-child(4) {
+    background-color: rgb(244, 245, 193);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.position div:nth-child(5) {
+    background-color: rgb(244, 245, 193);
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+.position div:nth-child(6) {
+    background-color: #fab993;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 100px;
+}
+.position div:nth-child(7) {
+    background-color: #fab993;
+    position: sticky;
+    top: 50px;
+}
+
+
+.list {
+    width: 800px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(244, 245, 193);
+}
+.list .item {
+    width: 380px;
+    position: relative;/* 포지션 기준 */
+    border: 10px solid rgb(174, 202, 129);
+}
+.list .item img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+.list .item .text {
+    font-size: 13px;
+    width: 100%;
+    color: rgb(107, 70, 22);
+    position: absolute;/* 포지션 설정 */
+    bottom: 30px;
+    background-color: rgba(240, 237, 162, 0.624);
+    text-align: center;
+    padding: 5px;
+}
+
+
+.list-02 {
+    width: 1280px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.list-02 .item {
+    width: 300px;
+    position: relative;
+}
+.list-02 .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+.list-02 .item p {
+    position: absolute;
+
+    /* 방법1(텍스트에만 배경색 O) */
+    /* background-color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    
+
+    /* 방법2(배경요소만큼 배경색 O) */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5%;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+}

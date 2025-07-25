@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직수평 정렬</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        .box {
+            width: 338px;
+            height: 108px;
+            border-radius: 8px;
+            margin: 100px;
+            padding: 0px 20px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* display: flex있어야 justify랑 align쓸 수 있음 */
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            /* 그림자 : x축 y축 흐림정도 색상 */
+        }
+        .box img {
+            width: 71px;
+            height: 71px;
+            object-fit: cover;
+        }
+        .box p {
+            font-size: 16px;
+            color: #333333;
+            font-weight: bold;
+        }
+        .box a {
+            font-size: 14px;
+            color: #888888;
+        }
+
+
+        .list {
+            width: 338px;
+            height: 108px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 0 20px;
+            margin: 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list .info {
+            display: flex;
+            align-items: center;
+        }
+        .info img {
+            width: 71px;
+            height: 71px;
+            object-fit: cover;
+            margin-right: 8px;
+            border: 1px solid #dfdfdf;
+            border-radius: 8px;
+        }
+        .info p {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333333;
+        }
+        .list a {
+            font-size: 14px;
+            color: #888888;
+        }
+
+
+        .first {
+            width: 338px;
+            height: 108px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 0 20px;
+            margin: 100px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .first .info {
+            display: flex;
+            align-items: center;
+        }
+        .first h1 {
+            font-size: 13px;
+            font-weight: normal;
+            color: #888888;
+            margin-bottom: 8px ;
+        }
+        .first .text {
+            width: 126px;
+        }
+        .first a {
+            font-size: 14px;  
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="img/image 13.png " alt="">
+        <p>베타알라닌</p>
+        <a href="#">보기</a>
+    </div><!-- box end -->
+
+    <div class="list">
+            <div class="info">
+                <img src="img/image 12.png" alt="">
+                <p>베타알라닌</p>
+            </div><!-- info end -->
+        <a href="#">보기</a>
+    </div><!-- list end -->
+    
+    <div class="first">
+            <div class="info">
+                <img src="img/image 11.png" alt="">
+                    <div class="text">
+                        <h1>소스내추럴</h1>
+                        <p>메가 스트렝스 베타 시토스테롤</p>
+                    </div><!-- text end -->
+            </div><!-- info end -->
+        <a href="#">보기</a>
+    </div><!-- first end -->
+</body> 
+</html>

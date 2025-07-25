@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모서리 곡선</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+            width: 300px;
+            height: 300px;
+            background-color:#7fadb9;
+            margin: 20px;
+            text-align: center;/* 텍스트 가로 가운데 정렬 */
+            line-height: 300px;/* 텍스트 세로 가운데 정렬 */
+                               /* alt + shift + a 주석달기 */
+            
+
+        }
+        ul li:nth-child(1) {
+            border-radius: 20px;
+        }
+        ul li:nth-child(2) {
+            border-radius: 10px 120px;
+        }
+        ul li:nth-child(3) {
+            border-radius: 10px 40px 150px;
+        }
+        ul li:nth-child(4) {
+            border-radius: 10px 40px 100px 150px;
+        }
+        ul li:nth-child(5) {
+            border-radius: 50%;
+        }
+        div a {
+            text-decoration: none;
+            width: 200px;
+            height: 60px;
+            background-color: pink;
+            color: brown;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 60px;
+            display: block;/* 인라인성질을 블럭성질로 변경 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>곡선1</li>
+        <li>곡선2</li>
+        <li>곡선3</li>
+        <li>곡선4</li>
+        <li>곡선5</li>
+    </ul>
+
+    <div>
+        <a href="#">바로 예약하기</a>
+    </div>
+</body>
+</html>

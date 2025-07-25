@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온보딩2연습</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .all {
+            margin: 0 auto;
+            width: 375px;
+            background-color: rgba(230, 230, 236, 0.5);
+            border-radius: 16px; 
+        }
+        .status img {
+            padding: 17px 18px 28px;
+        }
+        .prev img {
+            margin-left: 10px; 
+            margin-bottom: 55px;
+        }
+        .main {
+            margin-left: 19px;
+            margin-bottom: 40px;
+        }
+        .main h1 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        .main p {
+            font-size: 14px;
+            color: #888888;
+        }
+
+
+        .list {
+            padding: 0 18px;
+            margin-bottom: 142px;
+        }
+        .list .check img {
+            margin-right: 11px;
+        }
+
+        .modu {
+            display: flex;
+            border-bottom: 1px solid #b3b3b3;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+        }
+        .modutext h2 {
+            font-size: 18px;
+            margin-bottom: 9px;
+        }
+        .modutext p {
+            font-size: 13px;
+            color: #888888;
+        }
+
+        .nec {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px ;
+        }
+        .nec .check {
+            display: flex;
+        }
+        .nec .check p {
+            font-size: 14px;
+            line-height: 32px;
+        }
+        .nec .see span {
+            font-size: 14px;
+            color: #888888;
+            line-height: 32px;
+        }
+       
+        .next p {
+            font-size: 16px;
+            color: #FFFFFF;
+            text-align: center;
+            line-height: 50px;
+            width: 339px;
+            height: 50px;
+            background-color: #6532E9;
+            border-radius: 8px;
+            margin: 0 auto 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="status">
+            <img src="img/ios-status-bar.png" alt="">
+        </div><!-- status end -->
+        <div class="prev">
+            <img src="img/prev.png" alt="">
+        </div><!-- prev end -->
+
+        <div class="main">
+            <h1>약관에 동의해주세요</h1>
+            <p>여러분의 개인정보와 서비스 이용 권리</br>
+            잘 지켜드릴게요.</p>
+        </div><!-- main end -->
+
+        <div class="list">
+            <div class="modu">
+                <div class="check">
+                <img src="img/active.png" alt="">
+                </div><!-- check end -->
+                
+                <div class="modutext">
+                    <h2>모두 동의</h2>
+                    <p>서비스 이용을 위해 아래 약관에 모두 동의합니다.</p>
+                </div><!-- modutext end -->
+            </div><!-- modu end -->
+
+            <div class="ex">
+                <div class="nec">
+                        <div class="check">
+                            <img src="img/active.png" alt="">
+                            <p>(필수) 만 14세 이상입니다.</p>
+                        </div><!-- check end -->
+                    
+                </div>
+                <div class="nec">
+                        <div class="check">
+                            <img src="img/active.png" alt="">
+                            <p>(필수) 서비스 이용약관 동의</p>
+                        </div><!-- check end -->
+                        <div class="see">
+                            <span>보기</span>
+                        </div><!-- see end -->
+                </div>
+                <div class="nec">
+                        <div class="check">
+                            <img src="img/active.png" alt="">
+                            <p>(필수) 개인 정보 처리방침 동의</p>
+                        </div><!-- check end -->
+                        <div class="see">
+                            <span>보기</span>
+                        </div><!-- see end -->
+                </div>
+                <div class="nec">
+                        <div class="check">
+                            <img src="img/active.png" alt="">
+                            <p>(필수)민감정보 수집 및 이용 동의</p>
+                        </div><!-- check end -->
+                        <div class="see">
+                            <span>보기</span>
+                        </div><!-- see end -->
+                </div>
+                <div class="nec">
+                        <div class="check">
+                            <img src="img/active.png" alt="">
+                            <p>(선택) 마케팅 수신 동의</p>
+                        </div><!-- check end -->
+                        <div class="see">
+                            <span>보기</span>
+                        </div><!-- see end -->
+                </div>
+
+            </div><!-- ex end -->
+
+
+        </div><!-- list end -->
+        
+        <div class="next">
+            <p>다음</p>
+        </div><!-- next end -->
+
+        <div class="bar">
+            <img src="img/iPhone-status-bar(lower).png" alt="">
+        </div><!-- bar end -->
+
+    </div><!-- all end -->
+</body>
+</html>

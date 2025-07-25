@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 라이브러리</title>
+    <link rel="stylesheet" href="css/20.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">     <!-- @@@AOS CSS -->
+</head>
+<body>
+    <div class="header">
+        <h1 class="logo">
+            <a href="#">로고</a>
+        </h1><!-- logo end -->
+        <div class="nav">
+            <ul>
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+                <li><a href="#">메뉴5</a></li>
+            </ul>
+        </div><!-- nav end -->
+    </div><!-- header end -->
+
+    <div class="main">
+        <div class="main_visual">
+            <h2>동영상, 이미지가 들어가는 비주얼</h2>
+        </div><!-- main_visual end -->
+        
+        <div class="section-01">
+            <h3 data-aos="fade-down-right">이건 첫번째 레슨</h3>                <!-- @@@모션 넣을 태그 안에다가 복붙 -->
+        </div><!-- section-01 end -->
+        <div class="section-02">
+            <h3 data-aos="fade-up-right">이건 두번째 레슨</h3>
+        </div><!-- section-02 end -->
+    </div><!-- main end -->
+
+    <div class="footer">
+        <p>푸터 영역</p>
+    </div><!-- footer end -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>           <!-- @@@ADO JS -->
+    <script>
+        AOS.init();
+    </script>                                                                 <!-- @@@Initialize AOS -->
+</body>
+</html>

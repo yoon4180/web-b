@@ -1,0 +1,307 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(../font/Pretendard/Pretendard-Black.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(../font/Pretendard/Pretendard-ExtraBold.woff2) format('woff2'), url(../font/Pretendard/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/Pretendard/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../font/Pretendard/Pretendard-SemiBold.woff2) format('woff2'), url(../font/Pretendard/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../font/Pretendard/Pretendard-Medium.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/Pretendard/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(../font/Pretendard/Pretendard-Light.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(.../font/Pretendard/Pretendard-ExtraLight.woff2) format('woff2'), url(../font/Pretendard/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(../font/Pretendard/Pretendard-Thin.woff2) format('woff2'), url(../font/Pretendard/Pretendard-Thin.woff) format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+body {
+    color: #111111;
+    font-family: 'Pretendard';
+}
+.header {
+    width: 1920px;
+    height: 100px;
+    padding: 39.5px 210px;
+    display: flex;
+    column-gap: 146px;
+    align-items: center;
+    margin: 0 auto;
+}
+    .header img {
+        width: 224px;
+        height: 34px;
+    }
+    .header .hd01 ul {
+        display: flex;
+        column-gap: 60px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .header .hd02 ul {
+        display: flex;
+        column-gap: 20px;
+        color: #727272;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+
+.banner {
+    position: relative;
+    margin: 0 auto 164px;
+    width: 1920px;
+}
+    .banner .info {
+        position: absolute;
+        top: 210px;
+        left: 210px;
+        color: #FFFFFF;
+        width: 532px;
+    }
+    .banner .info .text {
+        margin-bottom: 60px;
+    }
+    .banner .info .text h2 {
+        font-size: 47px;
+        margin-bottom: 20px;
+    }
+    .banner .info .text p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    .banner .info .button {
+        width: 154px;
+        height: 52px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50px;
+        align-items: center;
+    }
+    .banner .info .button img {
+        width: 5.5px;
+        height: 9.5px;
+    }
+    .banner .info .button p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+
+.cont01 {
+    width: 1500px;
+    margin: 0 auto 109px;
+}
+.cont01 .title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.cont01 .title h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.cont01 .title p {
+    font-size: 18px;
+    color: #888888;
+    line-height: 1.5;
+}
+    .cont01 .boxes {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont01 .boxes .box {
+        width: 738px;
+        height: 480px;
+        border-radius: 28px;
+        position: relative;
+        background-color: #0072FF;
+        overflow: hidden;
+    }
+    .cont01 .boxes .box .text {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        color: #FFFFFF;
+    }
+    .cont01 .boxes .box .world {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .cont01 .boxes .box .text .Q {
+        margin-bottom: 35px;
+    }
+    .cont01 .boxes .box .text .Q p {
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
+    .cont01 .boxes .box .text .Q h3 {
+        font-size: 28px;
+        font-weight: 700; 
+    }
+        .cont01 .boxes .box .text .button {
+            width: 154px;
+            height: 52px;
+            padding: 0 24px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;    
+        }
+        .cont01 .boxes .box .text .button img {
+            width: 5.5px;
+            height: 9.5px;/* 왜 자꾸 집나가지 => .box안에 absolute필요한 img에 클래스명 주고 해결 */
+            display: block;
+        }
+        .cont01 .boxes .box .text .button p {
+            font-size: 16px;
+            font-weight: 500;
+    }
+.cont02 {
+    width: 1500px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+    .cont02 .list {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cont02 .list .item {
+        width: 357px;
+        height: 357px;
+        border: 1px solid #888888;
+        border-radius: 28px;
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000000;
+    }
+    .cont02 .list .item .info h3 {
+        color: #0072FF;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    .cont02 .list .item .info p {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .cont02 .list .item span{
+        font-size: 14px;
+    }
+
+
+.cont03 {
+    background-color: #eaf2fd;
+    padding: 50px 0;
+}
+.cont03 .footer {
+    width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 56px;
+}
+    .cont03 .footer .road {
+        width: 484px;
+        position: relative;
+    }
+    .cont03 .footer .road .text01 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .cont03 .footer .road .text01 h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .cont03 .footer .road .text01 .icon {
+        width: 5.5px;
+        height: 9.5px;
+    }
+    .cont03 .footer .road .car {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 152px;
+        height: 106px;
+    }
+    .cont03 .footer .road p {
+        width: 238px;
+        color: #888888;
+        word-break: keep-all;
+    }
+
+    .cont03 .footer .notice {
+        width: 420px;
+    }
+    .cont03 .footer .inquiry {
+        width: 484px;
+    }
