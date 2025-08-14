@@ -259,13 +259,13 @@ body {
 
 .cont03 {
     background-color: #eaf2fd;
-    padding: 50px 0;
 }
 .cont03 .footer {
     width: 1920px;
     margin: 0 auto;
+    padding: 50px 210px;
     display: flex;
-    column-gap: 56px;
+    justify-content: space-between;
 }
     .cont03 .footer .road {
         width: 484px;
@@ -282,16 +282,10 @@ body {
         font-size: 20px;
         font-weight: 700;
     }
-    .cont03 .footer .road .text01 .icon {
-        width: 5.5px;
-        height: 9.5px;
-    }
     .cont03 .footer .road .car {
         position: absolute;
         right: 0;
         bottom: 0;
-        width: 152px;
-        height: 106px;
     }
     .cont03 .footer .road p {
         width: 238px;
@@ -302,6 +296,60 @@ body {
     .cont03 .footer .notice {
         width: 420px;
     }
+    .cont03 .footer .notice .text02 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .cont03 .footer .notice .text02 h4 {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .cont03 .footer .notice p {
+        color: #888888;
+        font-size: 16px;
+    }
     .cont03 .footer .inquiry {
         width: 484px;
+        height: 163px;
+        border-radius: 28px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #ffffff;
+        background: url('../img/banner-btn.png');
+        font-weight: lighter;
+    }
+    .cont03 .footer .inquiry .text .det {
+        margin-bottom: 10px;
+    }
+    .cont03 .footer .inquiry .text .det p {
+        font-size: 16px;
+
+    }
+    .cont03 .footer .inquiry .text .det h5 {
+        font-size: 24px;
+    }
+    .cont03 .footer .inquiry .text span {
+        font-size: 14px;
+    }
+    .cont03 .footer .inquiry .but {
+        display: flex;
+        width: 135px;
+        height: 34px;
+        padding: 0 15px;
+        border: 1px solid #ffffff;
+        border-radius: 50px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .cont03 .footer .inquiry .but img {
+        width: 5.5px;
+        height: 9.5px;
+    }
+    .cont03 .footer .inquiry .but p {
+        font-size: 14px;
     }

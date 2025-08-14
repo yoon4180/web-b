@@ -1,0 +1,139 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+body {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* ::before, ::after는 인라인 태그로 취급 -> display: block;필요 */
+
+
+.text-01::before {      /* content 앞에 추가 */
+    content: '🍔🍟🥤';
+}
+.text-01::after {       /* content 뒤에 추가 */
+    content: '🍕🍝🍺';
+}
+.text-02 {
+    margin: 100px 0;
+    background-color: #ffd52c;
+    position: relative;
+}
+.text-02::before {
+    content: '';    /* content 필수, 내용없어도 상관X */
+    width: 50px;
+    height: 50px;
+    background-color: #da0d0d;
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%); /* 자기 크기 반만큼 이동해야 정확하게 가운데 */
+}
+.text-03 {
+    /* background-color: #ffd52c; */
+    position: relative;
+    display: inline-block; /* 텍스트 내용만큼 너비 잡힘 */
+}
+.text-03::after {
+    content: '';
+    width: 100%;
+    height: 20px;
+    background-color: #da0d0d;
+    display: block;
+    position: absolute;
+    left: 50%; /* 부모 기준 */
+    bottom: 0;
+    transform: translateX(-50%); /* 본인 기준 */
+    z-index: -1; /* 화면에 쌓이는 순서 */
+    padding: 0 20px;
+    
+}
+
+
+.item {
+    width: 400px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+.item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 0.3s;
+}
+.item a {
+    font-size: 20px;
+    color: #b40707;
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255, 213, 44, 0.8);
+    border: 1px black solid;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    z-index: 1;
+    opacity: 0;
+}
+.item .image_box img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.item:hover::after {        /* 밑에 있었기 때문에 top:0과 transition주면 올라오는 거 */
+    top: 0;
+}
+.item:hover a {
+    opacity: 1;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-color: #ffd52c;
+    border: 3px solid #b40707;
+    color: #b40707;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    display: block;
+    margin: 50px auto;
+  position: relative;
+    overflow: hidden;}
+.button::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 87, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.3s;
+}
+.button:hover::after {
+    left: 0;
+}

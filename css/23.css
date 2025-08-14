@@ -1,0 +1,156 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+section {
+    background-color: #253a82;
+    margin: 50px 0;
+    padding: 50px;
+}
+section h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    color: #ffb2f7;
+}
+section .list {
+    background-color: #ffb2f7;
+    color: #253a82;
+}
+section .list .item {
+    background-color: #c0e0ff;
+    border: 1px solid #88a2ff;
+    padding: 10px;
+}
+
+
+
+.flex-01 .list {
+    display: flex;
+    justify-content: space-around;
+    /* flex-start(기본값)
+    center
+    flex-end
+    space-around(맨끝 여백은 1/2)
+    space-evenly(여백 모두 동일) */
+}
+
+
+
+.flex-02 .list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* flex-start(기본값)
+    center
+    flex-end */
+}
+.flex-02 .list .item:first-child { /* nth-child(1)과 동일 */
+    height: 200px;
+}
+.flex-02 .list .item:nth-child(2) {
+    height: 150px;
+}
+.flex-02 .list .item:nth-child(3) {
+    height: 100px;
+}
+.flex-02 .list .item:nth-child(4) {
+    height: 50px;
+}
+
+
+
+.flex-03 .list {
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* flex-start
+    center
+    flex-end
+    space-around
+    space-evenly
+    space-between */
+}
+.flex-03 .list .item {
+    width: 50%;
+    height: 80px;
+}
+
+
+
+.flex-04 .list {
+    display: flex;
+} /* flex 있어야 order 가능 */
+.flex-04 .list .item:first-child {
+    order: 1;
+} /* 숫자가 클 수록 뒤로 */
+.flex-04 .list .item:last-child {
+    order: -1;
+} /* 숫자가 작을 수록 앞으로 */
+
+
+
+.flex-05 .list {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* justify-content 수직(수직) 정렬
+       align-content 수평(가로) 정렬 */
+}
+
+
+
+.cj {
+    display: flex;
+    gap: 50px;
+}
+.cj-01 {
+    width: 350px;
+    height: 450px;
+    background-color: #c2dc80;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #d56989;
+}
+.cj-01 strong {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    background-color: #f3eef1;
+    border-radius: 100%;
+    line-height: 80px;
+    text-align: center;
+} /* display:flex 없이 가운데 정렬하는 방법 */
+
+.cj-02 {
+    width: 350px;
+    height: 450px;
+    background-color: #d56989;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #c2dc80;
+}
+.cj-02 strong {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    background-color: #2a4421;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} /* display: flex 로 가운데 정렬하는 방법 (display 있어야만 align, justify 사용가능!!!) */
