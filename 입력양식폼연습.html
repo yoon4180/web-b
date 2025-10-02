@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="page.jsp" method="post">
+        <p>ID : <input type="text" name="id" id=""></p>
+        <p>PW: <input type="password" name="psw" id=""></p>
+        <label for="form-name">이름 :</label>
+        <input type="text" name="name" id="form-name" required placeholder="이름을 입력해주세요"></br></br>
+        <textarea name="" id="" row="3" cols="28"></textarea>
+
+        <h3>날짜 선택</h3>
+        <input type="date" name="" id="" value="2000-01-01">
+        <h3>시간 선택</h3>
+        <input type="time" name="" id="" value="00:00">
+        <h3>색상 선택</h3>
+        <input type="color" name="" id="" value="#ffffff">
+
+        <div class="radio">
+            <h3>혈액형을 선택해주세요</h3>
+            <label for="1">A형</label>
+            <input type="radio" name="bloodtype" value="a" id="1" checked>
+            <label for="2">B형</label>
+            <input type="radio" name="bloodtype" value="b" id="2">
+            <label for="3">O형</label>
+            <input type="radio" name="bloodtype" value="o" id="3">
+            <label for="4">AB형</label>
+            <input type="radio" name="bloodtype" value="ab" id="4">
+        </div><!-- radio -->
+
+        <div class="check">
+            <h3>현재 복용 중인 영양제를 선택해주세요</h3>
+            <label for="11">비타민</label>
+            <input type="checkbox" name="supplements" value="vita" id="11">
+            <label for="22">칼슘</label>
+            <input type="checkbox" name="supplements" value="ca" id="22">
+            <label for="33">마그네슘</label>
+            <input type="checkbox" name="supplements" value="mg" id="33">
+            <label for="44">오메가3</label>
+            <input type="checkbox" name="supplements" value="omg3" id="44">
+            <label for="55">철분제</label>
+            <input type="checkbox" name="supplements" value="fe" id="55">
+        </div><!-- check -->
+
+        <div class="select">
+
+        </div><!-- select -->
+
+    </form>
+</body>
+
+</html>

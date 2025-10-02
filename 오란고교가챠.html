@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오란고교 가챠</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .list {
+            width: 1500px;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+
+        .item {
+            width: 23%;
+        }
+
+        .item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+            /* 부드럽게 바뀌는 효과 */
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .header {
+            width: 100%;
+            height: 100px;
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .header h1 {
+            color: rgb(129, 25, 42);
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            let images = document.querySelectorAll('.item img');
+
+            let newImages = [
+                "img/Ouran_Mori.jpg",
+                "img/Ouran_Kyouya.jpg",
+                "img/꽝 (2).jpg",
+                "img/Ouran_Tamaki.jpg",
+                "img/Ouran_Haruhi.jpg",
+                "img/꽝 (1).jpg",
+                "img/Ouran_Hani.jpg",
+                "img/Ouran_Kaoru&Hikaru.jpg"
+            ];
+
+            images.forEach((img, index) => {
+                let originalSrc = img.src; // 원래 black_dot 저장
+                let toggled = false;       // 상태 플래그
+
+                img.addEventListener('click', () => {
+                    img.classList.add("fade-out"); // 먼저 서서히 사라짐
+
+                    setTimeout(() => {
+                        if (!toggled) {
+                            img.src = newImages[index]; // 새 이미지로 교체
+                        } else {
+                            img.src = originalSrc; // 다시 원래 이미지로
+                        }
+                        toggled = !toggled; // 상태 반전
+                        img.classList.remove("fade-out"); // 다시 나타남
+                    }, 300); // transition 시간과 맞춤
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <h1>💐운명의 결혼상대를 골라보세요!💏</h1>
+    </header><!-- header -->
+    <div class="list">
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+        <div class="item"><img src="img/black_dot.jpg" alt="#"></div>
+    </div><!-- list -->
+</body>
+
+</html>
