@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 위치 찾기</title>
+    <link rel="stylesheet" href="css/script12.css">
+    <script>
+        window.onload = () => {
+            let section1 = document.getElementsByClassName('section-01')[0];
+            let topBtn = document.getElementsByClassName('top_btn')[0];
+
+            window.addEventListener('scroll', () => {
+                //alert()
+                //section1이 화면에서 떨어진 y축 값 찾기
+                //offsetTop; y축 값 찾기
+                let scrollBar = window.scrollY;
+                console.log(section1.offsetTop);
+
+                window.addEventListener('scroll', () => {
+                    let scrollBar = window.scrollY;
+                    //스크롤바의 값이 첫번째 섹션의 y축 값보다 더 클 때 실행
+                    //top_btn에게 클래스명 active 추가
+                    //조건 안맞으면 클래스명 active 삭제
+                    if (scrollBar > section1.offsetTop/2) {
+                        topBtn.classList.add('active')
+                    } else {
+                        topBtn.classList.remove('active')
+                    }
+                })
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">header</header>
+
+        <main class="main">
+            <section class="main_visual">
+                <img src="img/hanyou (5).jpg" alt="">
+            </section><!-- main_visual -->
+
+            <section class="section-01">
+                첫번째 섹션
+            </section><!-- section-01 -->
+
+            <section class="section-02">
+                두번째 섹션
+            </section><!-- section-02 -->
+        </main><!-- main -->
+
+        <button class="top_btn">top</button>
+
+        <footer class="footer">footer</footer>
+    </div><!-- #wrap -->
+</body>
+
+</html>

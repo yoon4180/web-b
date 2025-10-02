@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼 이미지 변경</title>
+    <link rel="stylesheet" href="css/script08.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0];
+            let boxImage = box.getElementsByTagName('img')[0];
+            let boxPrev = box.getElementsByClassName('prev')[0];
+            let boxNext = box.getElementsByClassName('next')[0];
+            let boxNum = box.getElementsByClassName('num')[0];
+            let boxAllNum = box.getElementsByClassName('all_num')[0];
+
+            let i = 0;      // [0, 1, 2, 3]
+            let imageList = ['img/nagihiko (6).jpg', 
+                            'img/nagihiko (4).jpg', 
+                            'img/nagihiko (1).jpg', 
+                            'img/nagihiko (3).jpg']
+
+
+            //다음 버튼 클릭 시 실행
+                //1씩 증가
+                //img의 src값을 변수 imageList의 index(순서)
+
+            //length => 개수, 길이 구하기 : console창 들어가면 imageList속 개수 몇갠지 보임
+            console.log(imageList.length)
+
+            //전체 이미지 수 작성 => .all_num
+                //innerHTML
+                //문자와 숫자 연결 시 문자에 따옴표 필요(태그 추가하면 스타일 설정 가능)
+            boxAllNum.innerHTML = '<b>/ </b>' + imageList.length;
+
+
+
+            boxNext.addEventListener('click', () => {
+                i++;
+                if (i >= imageList.length) {
+                    i = 0;
+                }
+                boxImage.src = imageList[i];
+                //num에게 다음 버튼 클릭 시 숫자값 변경 (index는 0부터 시작이므로 + 1)
+                boxNum.innerHTML = i + 1;
+            })
+
+            boxPrev.addEventListener('click', () => {
+                i--;
+                if (i < 0) {
+                    i = imageList.length - 1
+                }
+                boxImage.src = imageList[i];
+                boxNum.innerHTML = i + 1;
+            })
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <div class="box">     <!-- [0] -->
+        <img src="img/nagihiko (6).jpg" alt="#">
+
+        <div class="btn">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div><!-- btn -->
+
+        <div class="page">
+            <span class="num">1</span>
+            <span class="all_num"></span>
+        </div><!-- page -->
+
+    </div><!-- box -->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤바값 찾기</title>
+    <link rel="stylesheet" href="css/script11.css">
+    <script>
+        window.onload = () => {
+            let header = document.getElementsByClassName('header')[0];
+
+            window.addEventListener('scroll', () => {
+                //alert(); <- 실행 확인용
+                //화면의 세로 스크롤바의 값
+                //window.scrollY
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+
+                //조건문
+                //스크롤바의 값이 200보다 크면 실행
+                    //header에게 클래스명 active 추가
+                    //조건 맞지않으면 클래스명 active 삭제
+                if (scrollBar > 200) {
+                    header.classList.add('active')
+                } else {
+                    header.classList.remove('active')
+                }
+
+            })
+        };//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#"><img src="img/hanyou (1).jpg" alt="로고"></a>
+            </h1><!-- logo -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav -->
+
+            <ul class="util">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul><!-- util -->
+        </div><!-- inner -->
+    </header><!-- header -->
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/hanyou (7).jpg" alt="">
+        </section><!-- main_visual -->
+    </main><!-- main -->
+</body>
+
+</html>

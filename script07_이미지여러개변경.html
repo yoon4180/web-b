@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 여러개 변경</title>
+    <link rel="stylesheet" href="css/script07.css">
+    <script>
+        window.onload = () => {
+            let boxBtn = document.getElementsByClassName('btn')[0];
+            let boxImage = document.getElementsByTagName('img')[0];
+            let boxText = document.getElementsByClassName('text')[0];
+
+            let i = 0;
+
+            //배열 : 하나의 변수 안에 여러 개의 데이터 값을 순서대로 저장 [인덱스값 0부터 시작]
+            let imageList = ['img/nagihiko (2).jpg',
+                'img/nagihiko (3).jpg',
+                'img/nagihiko (4).jpg',
+                'img/nagihiko (5).jpg']
+            let textList = ['나기히코',
+                'Nagihiko Fujisaki',
+                '시우1',
+                'なぎひこ'];
+
+            boxBtn.addEventListener('click', () => {
+                i++; //1씩 증가
+                console.log(i); //콘솔창 검사용
+
+                //i값이 4이상일 때 i=0으로
+                if (i >= 4) {
+                    i = 0;
+                }
+
+                boxImage.src = imageList[i]
+                boxText.innerHTML = textList[i]
+            })
+        };//script end
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <button class="btn">클릭</button>
+        <img src="img/nagihiko (1).jpg" alt="">
+        <p class="text">시우</p>
+    </div><!-- box -->
+</body>
+
+</html>

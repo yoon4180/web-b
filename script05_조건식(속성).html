@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식 - 속성</title>
+    <link rel="stylesheet" href="css/script05.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0];  //document 문서 안에서 찾기
+            let boxImage = box.getElementsByTagName('img')[0];    //.클래스명 안에서 찾기
+            let boxBtn = box.getElementsByClassName('box_btn')[0];
+
+            let section = document.getElementsByClassName('section')[0];
+            let sectionImage = section.getElementsByTagName('img')[0];  //클래스명 안에서 찾았기 때문에 인덱스 0
+            let sectionBtn = section.getElementsByClassName('section_btn')[0];
+
+            boxBtn.addEventListener('click', () => {
+                //alert('👙🎀🍹🌺💟');
+                //변수값 내에서 비교
+                if(boxImage.getAttribute('src') == 'img/summer (1).jpg') {
+                    //alert('조건맞음');
+                    boxImage.src = 'img/summer (5).jpg';
+                } else {
+                    //alert('맞지않음');
+                    boxImage.src = 'img/summer (1).jpg';
+                }
+            })
+
+            sectionBtn.addEventListener('click', () => {
+                //alert('');
+                if(sectionImage.getAttribute('src') == 'img/summer (3).jpg') {
+                    //alert('O');
+                    sectionImage.src = 'img/summer (2).jpg';
+                } else {
+                    //alert('X');
+                    sectionImage.src = 'img/summer (3).jpg'
+                }
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/summer (1).jpg" alt="#">
+        <button class="box_btn">이미지 변경</button>
+    </div><!-- box -->
+
+    <div class="section">
+        <img src="img/summer (3).jpg" alt="#">
+        <button class="section_btn">🌴🥥🌺</button>
+    </div><!-- section -->
+</body>
+
+</html>

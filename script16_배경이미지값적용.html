@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지값 적용</title>
+    <link rel="stylesheet" href="css/script16.css">
+    <script>
+        window.onload = () => {
+            let section = document.querySelector('.section');
+            let item = section.querySelectorAll('.item');
+            let itemImage = section.querySelectorAll('.item_image');
+
+
+            //for item에게 마우스 올렸을 때 ('mouseenter')
+                //section에게 스타일 적용 backgroundImage 값 적용 = 'url("파일명.확장자명")'
+            for (let i = 0; i < item.length; i++) {
+                item[i].addEventListener('mouseenter', () => {
+                    //itemImage[i].src
+                    console.log(itemImage[i].src);
+                    //section.style.backgroundImage = 'url("img/green2.jpg")'; // <- 이미지 하나로 적용
+                    // ------------ 소괄호, 공백 인식 못함!!!! ------------
+                    section.style.backgroundImage = 'url(' + itemImage[i].src + ')'; // <- 이미지 여러개 적용
+                });//item[i].mouseenter
+            };//for
+        };//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <h1>section title</br>˚ʚ｡･-･｡ɞ˚</h1>
+            <div class="list">
+                <div class="item">
+                    <img src="img/green1.jpg" alt="" class="item_image">
+                    <div class="text">
+                        <h2>item 1</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa quas obcaecati ratione iure
+                            nesciunt consequuntur, sapiente harum doloribus repudiandae aspernatur itaque ad quia
+                            quaerat velit quos, est recusandae assumenda libero.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+                <div class="item">
+                    <img src="img/green2.jpg" alt="" class="item_image">
+                    <div class="text">
+                        <h2>item 2</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse deleniti nesciunt doloribus
+                            laborum sint doloremque officiis repellendus quos a adipisci expedita asperiores, aliquid
+                            repellat id porro assumenda modi culpa? Eum.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+                <div class="item">
+                    <img src="img/green3.jpg" alt="" class="item_image">
+                    <div class="text">
+                        <h2>item 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi totam numquam neque
+                            officia pariatur adipisci voluptate, autem dolorum. Voluptate, laboriosam vero molestias
+                            ducimus sequi asperiores! Velit ratione et ab architecto!</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+                <div class="item">
+                    <img src="img/green4.jpg" alt="" class="item_image">
+                    <div class="text">
+                        <h2>item 4</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit earum labore ipsam, fugit eum
+                            fugiat fuga voluptatum rem id maiores vero odit facilis corrupti incidunt harum, ducimus
+                            voluptas error doloremque.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- list -->
+        </div><!-- inner -->
+    </section><!-- section -->
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지+텍스트값 가져오기</title>
+    <link rel="stylesheet" href="css/script15.css">
+    <script>
+        window.onload = () => {
+            //이게 더 빠름. 근데 웹퍼블리셔는 쿼리 더 많이 씀
+            //let itemDetailTitle = document.getElementsByClassName('title')[0];
+            let itemDetailTitle = document.querySelector('.item_detail .title');
+            let itemDetailText = document.querySelector('.item_detail .text');
+            let itemDetailImage = document.querySelector('.item_detail img');
+
+            let item = document.querySelectorAll('.item');
+            let itemTitle = document.querySelectorAll('.item .title');
+            let itemText = document.querySelectorAll('.item .text');
+            let itemImage = document.querySelectorAll('.item img');
+
+            for (let i = 0; i < item.length; i++) {
+                //item 클릭 시 실행
+                    //item_detail 내용이 클릭한 item의 내용이 들어감
+                    //텍스트 변경은 innerHTML, 사진변경은 src
+                item[i].addEventListener('click', () => {
+                    itemDetailTitle.innerHTML = itemTitle[i].innerHTML;
+                    itemDetailText.innerHTML = itemText[i].innerHTML;
+                    itemDetailImage.src = itemImage[i].src;
+                    
+                });//item[i].click()
+            };//for
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <div class="item_detail">
+                <img src="img/rirak (2).jpg" alt="">
+                <h2 class="title">아이템1</h2>
+                <p class="text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam doloribus sit, sed voluptatibus
+                    saepe eius ea tenetur reprehenderit quis minima sunt! Facilis soluta architecto quos ipsam aut
+                    molestiae accusamus autem?
+                </p>
+            </div><!-- item_detail -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/rirak (2).jpg" alt="">
+                    <h2 class="title">아이템1</h2>
+                    <p class="text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam doloribus sit, sed
+                        voluptatibus saepe eius ea tenetur reprehenderit quis minima sunt! Facilis soluta architecto
+                        quos ipsam aut molestiae accusamus autem?
+                    </p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/rirak (4).jpg" alt="">
+                    <h2 class="title">아이템2</h2>
+                    <p class="text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptas perspiciatis asperiores harum rerum minima, ipsum nostrum ut, incidunt nobis vitae nulla maxime cupiditate commodi aliquid obcaecati, corrupti!
+                    </p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/rirak (6).jpg" alt="">
+                    <h2 class="title">아이템3</h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deserunt ipsam amet ea magnam nesciunt asperiores rem error? Debitis velit fuga optio nisi qui autem asperiores. Dolores accusamus delectus consequuntur.
+                    </p>
+                </div><!-- item -->
+            </div><!-- list -->
+        </div><!-- inner -->
+    </section><!-- section -->
+</body>
+
+</html>

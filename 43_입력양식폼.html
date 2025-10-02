@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식 폼</title>
+</head>
+
+<body>
+    <h2>📄입력 양식 데이터 전송📄</h2>
+    <!-- 보안유지: post(url 뒤에 정보 남지 X) / 아니면 get -->
+    <!-- name은 구분을 위해 사용(중복가능) -->
+    <form action="page.jsp" method="post">
+        <p>ID : <input type="text" name="id" id=""></p>
+        <p>PW : <input type="password" name="psw" id=""></p>
+
+        <!-- lable이름과 id이름 똑같이 하면 이름 텍스트 클릭해도 박스에 커서생성 -->
+        <label for="form-name">이름 : </label>
+        <!-- required placeholder="박스 안에 들어갈 도움말 작성" -->
+        <input type="text" name="name" id="form-name" required placeholder="이름을 입력해주세요">
+
+        <!-- 영문기준 rows => 세로줄 수 / cols => 가로글자 수 -->
+        <textarea name="" id="" row="10" cols="20"></textarea>
+
+
+        <!-- radio : 여러 항목 중 '하나만' 선택할 수 있는 입력 요소 -->
+        <!-- 같은 name끼리 그룹됨 = 그 그룹 내에서 하나만 선택가능 -->
+        <!-- value 속성 넣으면 폼 전송 시 그 값이 서버로 넘어감 -->
+        <div class="radio">
+            <h3>📌당신의 강의실은 몇 호 입니까</h3>
+            <!-- for 값과 id 값 동일하게 지정하면 라벨 선택해도 항목 체크됨 -->
+            <label for="1">1001호</label>
+            <input type="radio" name="classroom" value="room1" id="1" checked>
+
+            <label for="2">1002호</label>
+            <input type="radio" name="classroom" value="room2" id="2">
+
+            <label for="3">1003호</label>
+            <input type="radio" name="classroom" value="room3" id="3">
+
+            <label for="4">1004호</label>
+            <input type="radio" name="classroom" value="room4" id="4">
+        </div><!-- radio -->
+
+
+        <!-- check : 여러 항목 '동시에' 선택할 수 있는 입력 요소 -->
+        <!-- 그룹 개념 없이 독립적 -->
+        <div class="check">
+            <h3>📌현재 관심을 가지고 있는 주제는 무엇입니까?</h3>
+            <!-- checked 해두면 디폴트로 체크돼 있음(라디오 태그도 동일) -->
+            <label for="html5">html5</label>
+            <input type="checkbox" name="subject" value="html5" id="html5" checked>
+
+            <label for="css3">CSS3</label>
+            <input type="checkbox" name="subject" value="CSS3" id="css3">
+
+            <label for="javascript">Javascript</label>
+            <input type="checkbox" name="subject" value="Javascript" id="javascript">
+
+            <label for="jquery">Jquery</label>
+            <input type="checkbox" name="subject" value="Jquery" id="jquery">
+        </div><!-- check -->
+
+
+        <div class="button">
+            <h3>🐍button 태그 사용</h3>
+            <!-- button 태그 -->
+            <!-- button : 일반버튼, 자바스크립트 이벤트 연결해서 동작 -->
+            <!-- submit : 기본값, 폼 작성 후 입력값 전송 -->
+            <!-- reset : 폼 입력값 초기화 -->
+            <button type="button">버튼태그</button>
+
+            <h3>🐍input 태그 사용</h3>
+            <!-- input type="button"은 value 속성으로만 텍스트 표시 가능 -->
+            <input type="button" value="인풋태그">
+        </div><!-- button -->
+
+
+        <div class="select">
+            <h3>📌관심 있는 학습 주제 한 가지를 선택하세요</h3>
+            <select name="subject">
+                <!-- selected 해두면 디폴트로 선택돼 있음 -->
+                <option value="1" selected>HTML5</option>
+                <option value="2">CSS3</option>
+                <option value="3">Javascript</option>
+                <option value="4">Jquery</option>
+            </select>
+        </div><!-- select -->
+
+
+        <div class="select-link">
+            <h3>📌관련 사이트</h3>
+            <!-- 옵션 선택 시 해당 사이트가 새 탭으로 열림 -->
+            <!-- select는 스타일 변경에 한계가 있기 때문에 보통 ul li 쓰고 스크립트 씀 -->
+            <select onchange="window.open(this.value, '_blank')">
+                <option value="">관련사이트</option>
+                <optgroup>
+                    <option value="https://www.naver.com/">네이버</option>
+                    <option value="https://www.gdweb.co.kr">gdweb</option>
+                    <option value="https://www.w3schools.com/">w3school</option>
+                </optgroup>
+            </select>
+        </div><!-- select-link -->
+
+
+        <h3>🐌숫자 입력 폼</h3>
+        <input type="number" name="" id="">
+
+        <h3>🐌날짜 양식</h3>
+        <input type="date" name="" id="" value="2025-01-01">
+
+        <h3>🐌시간 양식</h3>
+        <input type="time" name="" id="" value="00:00">
+
+        <h3>🎨색상 선택 양식</h3>
+        <input type="color" name="" id="" value="#fff0cc">
+
+        <input type="submit" value="전송">
+        <input type="reset" value="다시작성">
+    </form>
+</body>
+
+</html>

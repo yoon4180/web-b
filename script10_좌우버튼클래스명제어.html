@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼 클래스명 제어</title>
+    <link rel="stylesheet" href="css/script10.css">
+    <script>
+        window.onload = () => {
+            let item = document.getElementsByClassName('item');
+            let prevBtn = document.getElementsByClassName('prev')[0];
+            let nextBtn = document.getElementsByClassName('next')[0];
+
+            let i = 0;
+
+            nextBtn.addEventListener('click', () => {
+                i++;
+                item[i - 1].classList.remove('active');
+                if (i >= item.length) {
+                    i = 0;
+                };
+                item[i].classList.add('active');
+            })
+
+            prevBtn.addEventListener('click', () => {
+                i--;
+                item[i + 1].classList.remove('active');
+                if(i < 0) {
+                    i = item.length - 1;
+                };
+                item[i].classList.add('active')
+            })
+        };//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+
+        <div class="list">
+            <div class="item active">
+                <img src="img/hikaru (1).jpg" alt="">
+                <div class="text">
+                    <h2>item title 1</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ad, nisi quos asperiores,
+                        commodi cumque optio eaque id amet vel aut tenetur sapiente. Aliquid quod suscipit officiis
+                        delectus expedita rerum?</p>
+                </div><!-- text -->
+            </div><!-- item -->
+            <div class="item">
+                <img src="img/hikaru (2).jpg" alt="">
+                <div class="text">
+                    <h2>item title 2</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ad, nisi quos asperiores,
+                        commodi cumque optio eaque id amet vel aut tenetur sapiente. Aliquid quod suscipit officiis
+                        delectus expedita rerum?</p>
+                </div><!-- text -->
+            </div><!-- item -->
+            <div class="item">
+                <img src="img/hikaru (3).jpg" alt="">
+                <div class="text">
+                    <h2>item title 3</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ad, nisi quos asperiores,
+                        commodi cumque optio eaque id amet vel aut tenetur sapiente. Aliquid quod suscipit officiis
+                        delectus expedita rerum?</p>
+                </div><!-- text -->
+            </div><!-- item -->
+            <div class="item">
+                <img src="img/hikaru (4).jpg" alt="">
+                <div class="text">
+                    <h2>item title 4</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ad, nisi quos asperiores,
+                        commodi cumque optio eaque id amet vel aut tenetur sapiente. Aliquid quod suscipit officiis
+                        delectus expedita rerum?</p>
+                </div><!-- text -->
+            </div><!-- item -->
+        </div><!-- list -->
+
+        <div class="btn">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div><!-- btn -->
+
+    </section><!-- section -->
+</body>
+
+</html>

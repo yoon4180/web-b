@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색박스 만들기</title>
+    <link rel="stylesheet" href="css/script03.css">
+    <script>
+        window.onload = () => { 
+            let openBtn = document.getElementsByClassName('open_btn')[0];
+            let closeBtn = document.getElementsByClassName('close_btn')[0];
+            let searchBox = document.getElementsByClassName('search_box')[0];
+
+            //검색하기 버튼 클릭 시 실행
+                //검색박스 나타남
+                //검색닫기 버튼 나타남
+                //검색하기 버튼 사라짐
+            openBtn.addEventListener('click', () => {
+                searchBox.style.display = "block";
+                closeBtn.style.display = "block";
+                openBtn.style.display = "none";
+            })
+            closeBtn.addEventListener('click', () => {
+                searchBox.style.display = "none";
+                closeBtn.style.display = "none";
+                openBtn.style.display = "block";
+            })
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+
+            <h1 class="logo">
+                <a href="#">🍧logo🍨</a>
+            </h1><!-- logo -->
+
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">📍menu1</a></li>
+                    <li><a href="#">📍menu2</a></li>
+                    <li><a href="#">📍menu3</a></li>
+                    <li><a href="#">📍menu4</a></li>
+                    <li><a href="#">📍menu5</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav -->
+
+            <div class="search_wrap">
+                <button class="open_btn">검색하기</button>
+                <button class="close_btn">검색닫기</button>
+
+                <div class="search_box">
+                    <!-- 입력창 생김 -->              <!-- 미리보기 텍스트 -->
+                    <input type="text" name="" id="" placeholder="검색어를 입력해주세요.">
+                </div><!-- search_box -->
+            </div><!-- search_wrap -->
+
+        </div><!-- inner -->
+    </header><!-- header -->
+</body>
+
+</html>

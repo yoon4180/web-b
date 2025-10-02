@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증감 연산자</title>
+    <script>
+        window.onload = () => {
+            let num = document.getElementsByClassName('num')[0];
+            let downBtn = document.getElementsByClassName('down')[0];
+            let upBtn = document.getElementsByClassName('up')[0];
+            
+
+            //초기값(시작하고자 하는 값)
+            let i = 0;
+
+            //증가 버튼 클릭 시 실행
+                //증가 연산자 1씩 증가, 변수++
+            upBtn.addEventListener('click', () => {
+                //alert('')
+                i++;
+                //console.log(i++) //검사창 console에서 증가 버튼 눌러서 증가된 값 나타나는지 확인
+                num.innerHTML = i;
+            })
+
+            //감소 버튼 클릭시 실행
+                //감소 연산자 1씩 감소, 변수--
+            downBtn.addEventListener('click', () => {
+                //alert('')
+                i--;
+                //i값보다 0이 크면 i값은 0으로 설정
+                if (i < 0) {
+                    i = 0;
+                }
+                num.innerHTML = i;
+            })
+
+            
+
+        };//script end
+    </script>
+</head>
+<body>
+    <div class="btn_wrap">
+        <button class="down">감소 -</button>
+        <span class="num">0</span>
+        <button class="up">증가 +</button>
+    </div><!-- btn_wrap -->
+</body>
+
+</html>

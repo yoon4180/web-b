@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+
+    <style>
+        .menu li.active {
+            color: pink;
+        }
+    </style>
+
+    <script>
+        window.onload = () => {
+            //querySelector : 문서 내에 가장 첫번째 요소만 반환
+            //querySelector('.menu li'); : 첫번째 li만 지정
+            let menu = document.querySelectorAll('.menu li');//모든 li 지정
+
+            //반복문
+            //for(초기식; 조건식; 증감식) {실행코드}
+            for (let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', () => {
+                    console.log(i)
+                    menu[i].classList.add('active');
+
+                })
+            }
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul><!-- menu -->
+</body>
+
+</html>
