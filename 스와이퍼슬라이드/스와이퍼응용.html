@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+        .visual .swiper-wrapper {
+            align-items: center;
+        }
+        .visual .swiper {
+            padding: 100px 0;
+
+        }
+        .visual .swiper-slide {
+            width: 60%;
+            height: 600px;
+             transform: scale(0.95);
+             opacity: 0.5;
+             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+           
+        }
+        .visual .swiper-slide.swiper-slide-active {
+            transform: scale(1);
+            z-index: 99;
+            opacity: 1;
+             
+        }
+        .visual .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="visual">
+        <div class=" swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/bg-02.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/bg-03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/bg-04.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/cake02.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/city02.jpg" alt="">
+                </div>
+
+            </div><!-- swiper-wrapper -->
+        </div><!-- swiper -->
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+
+        var innerSwiper02 = new Swiper('.swiper-container', {
+            loop: true,
+            // autoplay: true,
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            centeredSlides: true
+        });
+
+
+
+    </script>
+</body>
+
+</html>

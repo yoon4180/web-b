@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <title>주간달력</title>
+    <link rel="stylesheet" href="css/calendar.css">
+
+    <script src="lib/jquery-3.7.0.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script>
+        $(function () {
+            //캘린더
+            var options = {
+                showDay: true,
+                showFullDayName: true,
+                showToday: true,
+            };
+
+            var date = new Date();
+            var html = weekHTML(date, options);
+            $(".calendar-yearmonth").html(
+                date.getFullYear() + "년 " + (date.getMonth() + 1) + "월"
+            );
+            $("#calendar").html(html);
+        })
+    </script>
+</head>
+
+<body>
+    <div class="calendar month">
+        <div class="calendar-header">
+            <span>📆</span>
+
+            <span class="calendar-yearmonth">
+                <!-- 년 월이 나타납니다.  -->
+            </span><!-- calendar-yearmonth -->
+
+        </div><!-- calendar-header -->
+        
+        <div id="calendar">
+            <!-- 주간 달력이 나타날 공간입니다. id="calendar" 변경하면 안됨 -->
+        </div><!-- #calendar -->
+
+    </div>
+
+
+
+</body>
+
+</html>

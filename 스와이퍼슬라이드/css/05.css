@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: rgb(209, 235, 199);
+    padding: 150px 0;
+}
+
+.section {      /* 2.포지션 relative 여기다 주기 */
+    position: relative;
+}
+
+.section h2 {
+    width: 1280px;
+    margin: 0 auto 40px;
+}
+
+.section .swiper-wrapper {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.section .swiper {
+    position: static;   /* 1. 페이지네이션의 원래 포지션 초기화 */
+}
+
+.section .swiper.sectionSwiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.section .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction.swiper-pagination {
+    position: absolute;    /* 3.원하는 위치 잡아주기 */
+    bottom: -20px;
+}
+
+
+/* section-02 */
+.section-02 {
+    padding-top: 200px;
+    position: relative;     /* 5. 다시 relative 주기 */
+}
+
+.section-02 h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-02 .swiper {
+    position: static;   /* 4.똑같이 기존 relative 초기화 */
+    overflow: visible;
+}
+
+.section-02 .swiper.section-02Swiper .swiper-wrapper .swiper-slide {
+    height: 400px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-02 .swiper.section-02Swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #fff;
+    
+}
+
+.section-02 .swiper.section-02Swiper .swiper-wrapper .swiper-slide .text {
+    width: 100%;
+    height: 20%;
+    background-color: rgba(255, 247, 172, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px;
+    display: none;
+}
+
+.section-02 .swiper.section-02Swiper .swiper-slide.swiper-slide-next + .swiper-slide {
+    transform: scale(1.1);
+}
+
+.section-02 .swiper.section-02Swiper .swiper-slide.swiper-slide-next + .swiper-slide .text {
+    display: flex;
+}
+
+.section-02 .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction.swiper-pagination {
+    position: absolute;    /* 3.원하는 위치 잡아주기 */
+    bottom: -60px;
+}

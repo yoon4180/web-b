@@ -1,0 +1,31 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.section-02 {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+.section-02 .swiper-slide {
+    height: 600px;
+}
+.section-02 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-02 .swiper-button-next,
+.section-02 .swiper-button-prev {
+    color: rgb(20, 146, 104);
+}

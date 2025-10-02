@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내비게이션 스타일 변경</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".sec-01-swiper", {     /* 여기 class명도 변경해야됨 */
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            })
+        }; //script end
+    </script>
+    
+    <link rel="stylesheet" href="css/03.css">
+</head>
+
+<body>
+    <section class="sec-01">
+        <!-- Swiper -->
+        <div class="swiper sec-01-swiper">          <!-- 여기 class명 변경하면 -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/img9.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/img10.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/img11.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/img12.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/img13.jpg" alt="">
+                </div><!-- swiper-slide end -->
+            </div><!-- swiper-wrapper end -->
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper sec-01-swiper end -->
+    </section><!-- sec-01 end -->
+</body>
+
+</html>

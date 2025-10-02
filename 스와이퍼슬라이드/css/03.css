@@ -1,0 +1,51 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.sec-01 {
+    width: 1200px;
+    margin: 100px auto;
+    position: relative; /* 2. 초기화 후 새로 position 지정 */
+}
+.sec-01 .swiper {
+    position: static; /* 1. position 초기화 */
+}
+.sec-01 .swiper-slide {
+    height: 700px;
+}
+.sec-01 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec-01 .swiper-button-next,
+.sec-01 .swiper-rtl .swiper-button-prev {   /* 검사창에서 버튼의 클래스명 복사 */
+    background: url('../img/icon_airplane.png') center center / 100% no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute; /* 3. position 주고 원하는 위치 작성 */
+    top: 50%;
+    right: -50px;
+}
+.sec-01 .swiper-button-prev,
+.sec-01 .swiper-rtl .swiper-button-next {
+    background: url('../img/icon_airplane.png') center center / 100% no-repeat;
+    width: 40px;
+    height: 40px;
+    position: absolute; /* 4. position 주고 원하는 위치 작성 */
+    top: 50%;
+    left: -50px;
+}
+.sec-01 .swiper-button-next:after,
+.sec-01 .swiper-button-prev:after {
+    display: none; /* 기존 아이콘 안보이게 설정 */
+}

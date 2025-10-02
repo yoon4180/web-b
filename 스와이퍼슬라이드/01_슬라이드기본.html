@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스와이퍼 슬라이드 - 기본</title>
+    <link rel="stylesheet" href="css/01.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        /* 브라우저 창(window)의 모든 리소스가 로드된 뒤 실행할 코드를 등록하는 방식 */
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
+            /* 두번째 스와이퍼 슬라이드 */
+            var swiper = new Swiper(".swiper-02", { /* 여기 이름도 변경필요 */
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <section class="section-01">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div><!-- swiper-wrapper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper end -->
+    </section><!-- section-01 end -->
+
+    <section class="section-02">
+        <div class="swiper swiper-02"> <!-- swiper 띄어쓰기 후 이름변경해야 각각으로 인식 -->
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="img/img1.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/img2.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/img3.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/img4.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/img5.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+            </div><!-- swiper-wrapper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper end -->
+    </section><!-- section-02 end -->
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데 스타일 변화</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/04.css"> <!-- 작성순서 중요!!!내가 설정하는게 더 아래로 -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var swiper = new Swiper(".scale-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }; //script end
+    </script>
+</head>
+
+<body>
+    <section class="sec-01">
+        <!-- per view -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/cooking_꼬지.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</br>(╹ڡ╹ )♪</h2>
+                        <p>01. 모둠꼬지 4set</p>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_초밥.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</br>(╹ڡ╹ )♪</h2>
+                        <p>02. 초밥 10pc</p>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_만두.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</br>(╹ڡ╹ )♪</h2>
+                        <p>03. 딤섬 7pc</p>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_베이글.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</br>(╹ڡ╹ )♪</h2>
+                        <p>04. 베이글 샌드위치</p>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_커리,난.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</br>(╹ڡ╹ )</h2>
+                        <p>05. 커리&난</p>
+                    </div><!-- text end -->
+                </div><!-- swiper-slide end -->
+            </div><!-- swiper-wrapper end -->
+            <div class="swiper-pagination"></div>
+        </div><!-- swiper mySwiper end -->
+    </section><!-- sec-01 end -->
+
+    <section class="sec-02">
+        <!-- per view -->
+        <div class="swiper scale-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/cooking_밤양갱.jpg" alt="">
+                    <p>01. 밤양갱♪</p>
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_샌드위치.jpg" alt="">
+                    <p>02. blt 샌드위치♪</p>
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_피시앤칩스.jpg" alt="">
+                    <p>03. 피시앤칩스♪</p>
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_꼬지.jpg" alt="">
+                    <p>04. 모둠꼬지 4set♪</p>
+                </div><!-- swiper-slide end -->
+                <div class="swiper-slide">
+                    <img src="img/cooking_만두.jpg" alt="">
+                    <p>05. 딤섬 7pc♪</p>
+                </div><!-- swiper-slide end -->
+            </div><!-- swiper-wrapper end -->
+            <div class="swiper-pagination"></div>
+        </div><!-- swiper scale-swiper end -->
+    </section><!-- sec-02 end -->
+</body>
+
+</html>

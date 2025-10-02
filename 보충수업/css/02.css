@@ -1,0 +1,44 @@
+@charset "utf08";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.list {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list .box {
+    background-color: lemonchiffon;
+    /* width: 300px;으로 계산 -> 300/1280*100 = 23.43%*/
+    width: 23.43%;
+    position: relative;
+}
+
+.list .box::before {
+    content: '';
+    padding-bottom: 100%;
+    display: block;
+}
+
+.list .box .item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: peachpuff;
+}

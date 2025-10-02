@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이노션에스2</title>
+    <link rel="stylesheet" href="css/style-2.css">
+    <script>
+        window.onload = () => {
+            document.querySelector('.nav_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.add('active')
+            });
+            document.querySelector('.close_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.remove('active')
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+
+            <h1 class="logo">
+                <a href="#"><img src="img/INNOCEAN-S_logo.svg" alt=""></a>
+            </h1><!-- logo -->
+
+            <nav class="nav_pc pc">
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav_pc -->
+
+            <ul class="lang pc">
+                <li><a href="#">KOR</a></li>
+                <li><a href="#">ENG</a></li>
+            </ul><!-- lang -->
+
+
+            <!---- 모바일 ver ---->
+            <button class="nav_btn mobile">
+                <img src="img/INNOCEAN-S_MENU.svg" alt="메뉴열기">
+            </button><!-- nav_btn -->
+
+            <nav class="nav_mobile mobile">
+                <button class="close_btn">
+                    <img src="img/INNOCEAN-S_CLOSE.svg" alt="메뉴닫기">
+                </button><!-- close_btn -->
+                <ul class="gnb">
+                    <li><a href="#">ABOUTS</a></li>
+                    <li><a href="#">WORKS</a></li>
+                    <li><a href="#">SOLUTIONS</a></li>
+                    <li><a href="#">INSIGHTS</a></li>
+                    <li><a href="#">CAREERS</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul><!-- gnb -->
+                <ul class="lang">
+                    <li><a href="#">KOR</a></li>
+                    <li><a href="#">ENG</a></li>
+                </ul><!-- lang -->
+            </nav><!-- nav_mobile -->
+
+        </div><!-- inner -->
+    </header><!-- header -->
+
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/INNOCEAN-S_IMG.png" alt="">
+        </section><!-- main_visual -->
+    </main><!-- main -->
+</body>
+
+</html>

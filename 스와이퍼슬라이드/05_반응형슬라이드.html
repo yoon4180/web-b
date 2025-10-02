@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="css/05.css">
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".sectionSwiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3.5,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 4.5,
+                        spaceBetween: 28,
+                    },
+                },
+            });
+
+            /* 두번째 슬라이드 */
+            var swiper = new Swiper(".section-02Swiper", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+        };//script
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <h2>피크민 도감</h2>
+        <!-- Swiper -->
+        <div class="swiper sectionSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/피크민 (12).jpg" alt="">
+                    <div class="text">
+                        <strong>파란 피크민</strong>
+                        <p>물에서 숨쉴 수 있어요.</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (8).jpg" alt="">
+                    <div class="text">
+                        <strong>빨간 피크민</strong>
+                        <p>불에 강해요.</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (10).jpg" alt="">
+                    <div class="text">
+                        <strong>노란 피크민</strong>
+                        <p>높이 날 수 있어요.</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (7).jpg" alt="">
+                    <div class="text">
+                        <strong>보라 피크민</strong>
+                        <p>힘이 세요.</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (6).jpg" alt="">
+                    <div class="text">
+                        <strong>얼음 피크민</strong>
+                        <p>얼릴 수 있어요.</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (11).jpg" alt="">
+                    <div class="text">
+                        <strong>반짝 피크민</strong>
+                        <p>죽지 않아요?</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+            </div><!-- swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+        </div><!-- swiper.sectionSwiper -->
+    </section><!-- section -->
+
+
+    <section class="section-02">
+        <h2>피크민 도감 (달콤 ver)</h2>
+        <!-- Swiper -->
+        <div class="swiper section-02Swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/피크민 (5).jpg" alt="">
+                    <div class="text">
+                        <strong>바위 피크민</strong>
+                        <p>요거트 아이스크림</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (3).jpg" alt="">
+                    <div class="text">
+                        <strong>노랑 피크민</strong>
+                        <p>라즈베리 도넛</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (4).jpg" alt="">
+                    <div class="text">
+                        <strong>날개 피크민</strong>
+                        <p>바닐라 아이스크림</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (1).jpg" alt="">
+                    <div class="text">
+                        <strong>노랑 피크민</strong>
+                        <p>두가지맛 아이스크림</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (2).jpg" alt="">
+                    <div class="text">
+                        <strong>파랑 피크민</strong>
+                        <p>초코 도넛</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (3).jpg" alt="">
+                    <div class="text">
+                        <strong>노랑 피크민</strong>
+                        <p>라즈베리 도넛</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/피크민 (4).jpg" alt="">
+                    <div class="text">
+                        <strong>날개 피크민</strong>
+                        <p>바닐라 아이스크림</p>
+                    </div><!-- text -->
+                </div><!-- swiper-slide -->
+            </div><!-- swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+        </div><!-- section-02Swiper -->
+    </section><!-- section-02 -->
+</body>
+
+</html>

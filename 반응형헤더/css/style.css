@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.mobile {
+    display: none;
+}
+
+.header {
+    height: 4.88rem;
+    padding: 0 2.22rem;
+}
+
+.header .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .logo {
+    width: 9.66rem;
+}
+
+.header .inner .logo a {
+    width: 100%;
+    display: block;
+}
+
+.header .inner .logo a img {
+    width: 100%;
+    height: auto;
+}
+
+.header .inner .nav_pc .gnb {
+    display: flex;
+    gap: 5px;
+}
+
+.header .inner .nav_pc .gnb li a {
+    display: block;
+    width: 97px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header .inner .lang_pc {
+    display: flex;
+    gap: 0.88rem;
+    font-size: 0.78rem;
+}
+
+.main_visual {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 39%;
+}
+
+.main_visual img {
+    width: 100%;
+    z-index: -1;
+}
+
+
+/* 화면 1023px이하일 때 */
+@media screen and (max-width: 1023px) {
+    .pc {display: none;}
+    .mobile {display: block;}
+
+    .header {
+        height: 72px;
+        padding: 0 2.4rem;
+    }
+    
+    .header .inner .nav_btn {
+    height: 100%;
+    border: 0;
+    background-color: transparent;
+    }
+
+    .header .inner .nav_mobile {
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        padding: 14.8rem 1.6rem 0;
+        transition: right 0.5s;
+    }
+
+    .header .inner .nav_mobile.active {
+        right: 0;
+    }
+
+    .header .inner .nav_mobile .close_btn {
+        border: 0;
+        background-color: transparent;
+    }
+
+    .header .inner .nav_mobile .gnb {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    .header .inner .nav_mobile .gnb li a {
+        padding: 0.6rem 0.8rem;
+    }
+}
