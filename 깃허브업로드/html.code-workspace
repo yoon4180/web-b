@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../과제/07_프로토타입 기초데이터 수집 및 스케치/html"
+		},
+		{
+			"path": "../../프로젝트/쏘카"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "쏘카"
+	}
+}
