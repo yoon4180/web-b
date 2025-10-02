@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    line-height: 1;
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(187, 245, 255);
+    border-bottom: 2px solid #9cb8f5;
+}
+
+.header .inner {
+    height: 100%;
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 40px;
+}
+
+.header .inner .search_wrap button {
+    width: 70px;
+    height: 30px;
+    border: 1px solid #5b8fff;
+    background-color: #9cb8f5;
+    border-radius: 50%;
+}
+
+.header .inner .search_wrap button.close_btn {
+    display: none; /* 검색하기 누르기 전엔 나타나지 X */
+    background-color: #feffaf;
+}
+
+.header .inner .search_wrap .search_box {
+    width: 100%;
+    background-color: #9cb8f5;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 10px;  /* 검색창 밖 간격 */
+    display: none; /* 검색하기 누르기 전엔 나타나지 X */
+}
+
+.header .inner .search_wrap .search_box input {
+    width: 100%;
+    height: 30px;
+    background-color: #feffaf;
+    border: 0;
+    padding: 0 20px; /* 검색창 안에 간격 */
+}

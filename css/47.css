@@ -1,0 +1,74 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('47common.css');
+
+.main_visual {
+    height: calc(100vh - 100px);
+    position: relative;
+    z-index: -1;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual .text {
+    max-width: 1400px;
+    width: calc(100% - 32px);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50px);
+}
+
+.main_visual .text h2 {
+    font-size: 70px;
+    font-family: 'SB-Aggro';
+    font-weight: bold;
+}
+
+.main_visual .text p {
+    font-size: 20px;
+}
+
+.section-01 {
+    padding: 160px 0;
+}
+
+.section-01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-01 .list .item {
+    width: 23.21%;
+    position: relative; /* 1 */
+}
+
+.section-01 .list .item a {
+    display: block;
+}
+
+.section-01 .list .item a .image {
+    /* height: 357px; */
+    padding-bottom: 109.84%; /* 2 */
+}
+
+.section-01 .list .item a .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute; /* 3 */
+    top: 0;
+    left: 0;
+}
+
+.section-01 .list .item a p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}

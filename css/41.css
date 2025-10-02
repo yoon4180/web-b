@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color: #ffab9c;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* 1. 애니메이션 이름 직접 설정 */
+    animation-name: animation-ball;
+
+    /* 2. 애니메이션 횟수 */
+    /* infinite (무한반복) */
+    animation-iteration-count: infinite;
+
+    /* 3. 애니메이션 움직임 */
+    /*  ease(기본값) : 느리게 시작해서 빨라졌다가 다시 느려짐
+        linear : 일정 속도 유지
+        ease-in : 점점 빨라짐
+        ease-out : 점점 느려짐
+        ease-in-out : 처음과 끝이 느림 */
+    animation-timing-function: ease-in-out;
+
+    /* 4. 애니메이션 시간 */
+    animation-duration: 3s;
+
+    /* 5. 애니메이션 방향 */
+    /* alternate : 정방향에서 번갈아가며 움직임
+       reverse : 반대방향에서 시작
+       alternate-reverse :  반대방향에서 번갈아가며 움직임 */
+    animation-direction: alternate;
+
+}
+
+    /* @keyframes 애니메이션 이름 {} -> 실행문 작성 */
+@keyframes animation-ball {
+    0% {
+        width: 150px;
+    }
+
+    50% {
+        transform: translate(150px, 100px);
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    100% {
+        width: 400px;
+        background-color: #9edd79;
+        transform: rotate(180deg) translateX(-300px);
+    }
+}
+
+.text {
+    background-color: rgb(255, 255, 182);
+    color: rgb(27, 109, 27);
+    font-size: 30px;
+    margin-top: 400px;
+    overflow: hidden;
+}
+
+.text ul {
+    display: flex;
+    animation: text-slide 10s infinite alternate linear;
+}
+
+.text ul li {
+    white-space: nowrap;
+}
+
+@keyframes text-slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-120%);
+    }
+}

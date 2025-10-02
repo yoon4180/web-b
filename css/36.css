@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #9ad3ee;
+    color: #da0f0f;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+.header {
+    height: 100px;
+}
+
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .logo {
+    height: 100px;
+}
+
+.header .inner .logo a {
+    display: block;
+    height: 100%;
+}
+
+.header .inner .logo a img {
+    height: 100%;
+}
+
+.header .inner .menu_btn {
+    border: 0;
+    background-color: transparent;
+    height: 50px;
+}
+
+.header .inner .menu_btn img {
+    height: 100%;
+}
+
+.header .inner .nav {
+    width: 40%;
+    height: 100%;
+    background: #8cc2d4;
+    background: linear-gradient(180deg, rgba(122, 190, 212, 0.8) 0%, rgba(112, 153, 228, 0.8) 40%, rgba(163, 89, 192, 0.8) 100%);
+    position: fixed;
+    right: -100%;
+    top: 100px;
+    padding: 70px;
+    transition: right 0.7s linear;
+    overflow-y: auto;
+    /* 해당 공간보다 넘칠 때 스크롤바 만들어줌 */
+}
+
+.header .inner .nav::-webkit-scrollbar {
+    display: none;
+    /* 스크롤바 스타일 없애기 (기능O) */
+}
+
+.header .inner .nav.active {
+    right: 0;
+}
+
+.header .inner .nav .gnb {}
+
+.header .inner .nav .gnb>li {
+    margin-bottom: 28px;
+}
+
+.header .inner .nav .gnb>li .depth-01 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .inner .nav .gnb>li .depth-02 {}
+
+.header .inner .nav .gnb>li .depth-02 li {
+    font-size: 15px;
+    color: rgba(218, 15, 15, 0.7);
+    padding: 7px;
+}
+
+.header .inner .nav .gnb>li .depth-02 li a {}
+
+.main_visual {
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+}
+
+.main_visual img {
+    width: auto;
+    height: 100%;
+    display: block;
+}

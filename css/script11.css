@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('../css/reset.css');
+
+body {
+    height: 3000px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+
+.header.active {
+    background-color: pink;
+}
+
+.header .inner {
+    max-width: 1280px;
+    width: calc(100% - 32px);
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header .inner .logo {
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .inner .logo a {
+    height: 100%;
+    display: block;
+}
+
+.header .inner .logo a img {
+    height: 100%;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+    gap: 20px;
+}
+
+.header .inner .util {
+    display: flex;
+    gap: 20px;
+}
+
+.main_visual {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}

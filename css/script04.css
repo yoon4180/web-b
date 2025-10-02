@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #fff;
+}
+
+.mode_btn {
+    width: 120px;
+    height: 50px;
+    color: rgb(255, 102, 0);
+    background-color: rgb(255, 246, 194);
+    border: 2px solid rgb(248, 197, 103);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

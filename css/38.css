@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sec-01 {
+    background-color: #ffecd1;
+    color: #3e000c;
+    padding: 160px 0;
+}
+
+.sec-01 .inner {
+    max-width: 1440px;        /* 최대일 때 너비값 1440px 지정 */
+    width: calc(100% - 30px); /* 1440px 이하일 때 양쪽 여백 15px고정으로 맞춰 줄어감 */
+    margin: 0 auto;
+}
+
+.sec-01 .inner h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.sec-01 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-01 .inner .list .item {
+    width: calc(24%);        /* 아이템간 간격 존재 위해 (25-1)% */
+}
+
+.sec-01 .inner .list .item a .image {
+    width: 100%;
+    height: 400px;
+}
+
+.sec-01 .inner .list .item a .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* sec-02 */
+.sec-02 {
+    background-color: #dcecc1;
+    color: #3e000c;
+    padding: 160px 0;
+}
+
+.sec-02 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
+.sec-02 .inner .list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 150px;
+}
+.sec-02 .inner .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-02 .inner .item .image {
+    width: 50%;
+    height: 400px;
+}
+
+.sec-02 .inner .item:nth-child(odd) .image {
+    order: 1; /* 디폴트 0, 숫자 클수록 뒤로 배치됨 */
+}
+
+.sec-02 .inner .item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec-02 .inner .item .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.sec-02 .inner .item .text strong {
+    font-size: 40px;
+}
+
+.sec-02 .inner .item .text p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+
+/* sec-03 */
+.sec-03 {
+    background-color: #ffecd1;
+    color: #3e000c;
+    padding: 160px 0;
+}
+
+.sec-03 .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+
+.sec-03 .inner h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.sec-03 .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-03 .inner .list .item {
+    width: 24%;
+    position: relative;
+}
+
+.sec-03 .inner .list .item a .image {
+    width: 100%;
+    height: 400px;
+}
+
+.sec-03 .inner .list .item a .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sec-03 .inner .list .item a .text {
+    width: 100%;
+    height: 100%; /* 가로세로 크기 줘야 배경 전체 들어감 */
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none; /* 안보임 상태 -> hover에 flex줌 */
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.sec-03 .inner .list .item:hover a .text {
+    display: flex;
+}
+
+
+
+/* 화면 1440px 이하일 때 스타일 변화 */
+/* @media screen and (max-width: 1440px) {
+    .sec-01 .inner {
+        width: 100%;    1440px 이하일 때 양쪽 여백없이 width가 맞춰 줄어듦
+        width: 90%;     리스트 크기 90%로 고정으로 여백 존재
+        width: calc(100% - 30px);   양쪽에 15px씩 여백 고정
+    }
+} */
+
+
+/* 화면 1024px 이하일 때 스타일 변화 */
+@media screen and (max-width: 1024px) {
+    .sec-01 {
+        padding: 80px 0;
+    }
+    .sec-01 .inner .list {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .sec-01 .inner .list .item {
+        width: 49%;
+    }
+
+    .sec-02 .inner .list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .sec-02 .inner .list .item {
+        flex-wrap: wrap;
+    }
+    .sec-02 .inner .list .item .image {
+        width: 100%;
+    }
+    .sec-02 .inner .item:nth-child(odd) .image {
+        order: 0;
+    }
+
+    .sec-03 .inner .list .item a .text {
+        display: flex;
+    }
+}
+
+
+/* 화면 900px 이하일 때 스타일 변화 */
+@media screen and (max-width: 900px) {
+    .sec-03 .inner .list {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    .sec-03 .inner .list .item {
+        width: 49%;
+    }
+}
+
+
+/* 화면 480px 이하일 때 스타일 변화 */
+@media screen and (max-width: 480px) {
+    .sec-01 .inner h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .sec-01 .inner .list .item a .image{
+        height: 240px;
+    }
+
+    .sec-02 .inner .item .text strong {
+        font-size: 24px;
+    }
+    .sec-02 .inner .item .text p {
+        font-size: 18px;
+    }
+
+    .sec-03 .inner .list .item {
+        width: 100%;
+    }
+    .sec-03 .inner .list .item a .image {
+        height: 200px;
+    }
+    .sec-03 .inner .list .item a .text {
+        height: auto; /* auto가 초기화 */
+        position: static; /* position 초기화 */
+        background-color: transparent;
+        color: #3e000c;
+    }
+}

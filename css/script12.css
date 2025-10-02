@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.header {
+    height: 100px;
+    background-color: #dfaabe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_visual img {
+    width: auto;
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    object-fit: cover;
+    display: block;
+}
+
+.section-01 {
+    height: 100vh;
+    background-color: #303030;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-02 {
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.top_btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(238, 181, 203, 0.8);
+    border: 1px dashed rgb(167, 97, 109);
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    display: none;
+}
+
+.top_btn.active {
+    display: block;
+}

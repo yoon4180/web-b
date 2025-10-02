@@ -1,0 +1,58 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.section {
+    /* 1. item 첫번째 이미지랑 같은거 백그라운드로 넣어줌 */
+    background: url('../img/green1.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+}
+
+.section .inner {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* 2.h1의 높이값이 자기꺼만큼 되도록 해줘야 sticky 먹힘 */
+    align-items: flex-start;
+}
+
+.section .inner h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    /* 텍스트 스트록 주는 방법 */
+    -webkit-text-stroke: 0.5px black;
+    /* 1. 스크롤해도 고정 */
+    position: sticky;
+    top: 50px;
+}
+
+.section .inner .list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section .inner .list .item {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+}
+
+.section .inner .list .item .item_image {
+    /* 2. item 이미지들 다 안보이게 숨김 */
+    display: none;
+}
+
+.section .inner .list .item .text {}
+
+.section .inner .list .item .text h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.section .inner .list .item .text p {
+    font-size: 12px;
+    line-height: 1.3;
+}

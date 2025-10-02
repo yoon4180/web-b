@@ -1,0 +1,66 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.section {
+    background-color: rgb(255, 158, 48);
+    color: rgb(104, 45, 18);
+    padding: 100px 0;
+}
+
+.section .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.section .inner h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section .inner .tab_menu {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.section .inner .tab_menu li {
+    height: 40px;
+    background-color: rgb(255, 246, 194);
+    padding: 0 20px;
+    border-radius: 20px;
+    line-height: 40px;
+}
+
+.section .inner .tab_menu li:hover {
+    background-color: rgb(255, 253, 146);
+}
+
+.section .inner .tab_menu li.active {
+    background-color: rgb(255, 251, 37);
+    border: 2px solid rgb(104, 45, 18);
+}
+
+.section .inner .list {
+    /* display: flex; */
+    justify-content: space-between;
+    display: none; /* 1. 리스트 안보이게 */
+}
+
+.section .inner .list.active {
+    display: flex; /* 3. active만 보이게 */
+}
+
+.section .inner .list .item {
+    width: 24%;
+    text-align: center;
+}
+
+.section .inner .list .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.section .inner .list .item strong {}

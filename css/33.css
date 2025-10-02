@@ -1,0 +1,58 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    background-color: rgb(255, 252, 216);
+    color: #1e7213;
+}
+.box div {
+    width: 500px;
+    height: 50px;
+    border: 2px solid #1e7213;
+    line-height: 50px;
+    text-align: center;
+    margin: 30px;
+}
+.box div:first-child:hover {
+    width: 700px;
+    background-color: #f7cec1;
+    transition: all 0.7s;
+}
+.box div:nth-child(2):hover {
+    height: 300px;
+    background-color: #f5c292;
+    transition: background-color 2s; /* 적용할 곳, 실행시간 */
+}
+.box div:nth-child(3):hover {
+    height: 300px;
+    background-color: #d3d3f3;
+    transition: all 2s 1s; /* 적용할 곳, 실행시간 , 지연시간 */
+}
+.box div:nth-child(4):hover {
+    height: 300px;
+    background-color: #fae1f0;
+    transition: height 2s linear;
+        /*  ease(기본값) : 느리게 시작해서 빨라졌다가 다시 느려짐
+            linear : 일정 속도 유지
+            ease-in : 점점 빨라짐
+            ease-out : 점점 느려짐
+            ease-in-out : 처음과 끝이 느림 */
+}
+.box div:last-child:hover {
+    width: 700px;
+    height: 300px;
+    background-color: #c4e6c4;
+    transition: width 0.5s,
+                height 2s 0.5s;
+        /* 쉼표와 지연시간으로 트랜지션 순서 줄 수 있음 */
+}

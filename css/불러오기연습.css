@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.section {
+    background: url('../img/green1.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+}
+.section .inner {
+    max-width: 1400px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section .inner .item_detail {
+    width: 48%;
+}
+.section .inner .item_detail .item_image {
+    width: 100%;
+}
+.section .inner .item_detail .text {}
+.section .inner .item_detail .text strong {}
+.section .inner .item_detail .text p {}
+
+.section .inner .list {
+    width: 48%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+}
+.section .inner .list .item {
+    width: 49%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.section .inner .list .item .item_image {
+    display: none;
+}
+.section .inner .list .item .text {}
+.section .inner .list .item .text strong {}
+.section .inner .list .item .text p {}
